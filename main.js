@@ -37,7 +37,13 @@ var defaultMenuTemplate = [{
 app.on('ready', function() {
     Menu.setApplicationMenu(Menu.buildFromTemplate(defaultMenuTemplate));
 
-    mainWindow = new BrowserWindow({width: 1000, height: 800});
+    mainWindow = new BrowserWindow({
+		width: 1000,
+		height: 800,
+		webPreferences: {
+			nodeIntegration: true
+		}
+    });
     mainWindow.loadURL('file://' + __dirname + '/index.html');
 
     mainWindow.on('closed', function() {
