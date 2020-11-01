@@ -38,3 +38,6 @@ jspm_packages
 
 dist/
 resources/css/main.css
+
+# Editors
+.idea
