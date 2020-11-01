@@ -17,6 +17,7 @@ var defaultMenuTemplate = [{
 	label: "Application",
 	submenu: [
 		{ label: "About Application", selector: "orderFrontStandardAboutPanel:" },
+		{ label: "Toggle Developer Tools", accelerator: "CmdOrCtrl+Shift+I", click: function() { mainWindow.toggleDevTools() }},
 		{ type: "separator" },
 		{ label: "Quit", accelerator: "Command+Q", click: function() { app.quit(); }}
 	]}, {
